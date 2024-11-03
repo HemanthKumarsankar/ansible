@@ -1,0 +1,9 @@
+- name: Install nginx
+  hosts: ansibleservers
+  become: yes
+  tasks: 
+   - name: Installing nginx in node servers
+     ansible.builtin.package:
+      name: nginx
+      msg: "nginx installed"
+     
