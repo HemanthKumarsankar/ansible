@@ -11,6 +11,6 @@
     prompt: please enter the duration
   tasks:
   - name: print the information
-    anisble.builtin.debug:
-      msg: "HI, {{STUDENT}} learning {{COURSE}}, duration is {{DURATION}} and trainer is {{TRAINER}}"
+    ansible.builtin.debug:
+     msg: "HI, {{STUDENT}} learning {{COURSE}}, duration is {{DURATION}} and trainer is {{TRAINER}}"
 
