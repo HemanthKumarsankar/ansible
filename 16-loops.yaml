@@ -4,7 +4,7 @@
   tasks:
   - name: print names
     ansible.builtin.debug:
-      msg: "hello {{item}}"  #item is the reserved keyword in ansible
+      msg: "hello {{ item }}"  #item is the reserved keyword in ansible
     loop:
      -Sree
      -Siva
