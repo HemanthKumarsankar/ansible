@@ -1,0 +1,16 @@
+- name: variables taking from the prompt
+  hosts: ansibleservers
+  vars_prompt:
+  - name: COURSE
+    prompt: please enter the course name
+  - name: TRAINER
+    prmpt: please enter the trainer name
+  - name: STUDENT
+    prompt: please enter the stundent name
+  - name: DURATION
+    prompt: please enter the duration
+  tasks:
+   - name: print the information
+     anisble.builtin.debug:
+      msg: "HI, {{STUDENT}} learning {{COURSE}}, duration is {{DURATION}} and trainer is {{TRAINER}}"
+
