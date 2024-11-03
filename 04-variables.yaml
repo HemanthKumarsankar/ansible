@@ -5,6 +5,6 @@
     DURATION: "120Hrs"
     STUDENT: "Hemanth"
   tasks:
-   - name: print the information
-     ansible.builtin.debug:
-     msg: "Hi, {{STUDENT}} is preparing course for {{COURSE}} and duration is {{DURATION}}"
+  - name: print the information
+    ansible.builtin.debug:
+    msg: "Hi, {{STUDENT}} is preparing course for {{COURSE}} and duration is {{DURATION}}"
