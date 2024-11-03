@@ -1,5 +1,5 @@
   #PLAY-01
-- name: ping the server
+- name: PLAY-01
   hosts: ansibleservers #to connect server
   tasks:
   - name: PLAY-01 TASK-01
