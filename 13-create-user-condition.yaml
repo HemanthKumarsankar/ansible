@@ -1,6 +1,5 @@
 - name: create user
   hosts: ansibleservers
-  vars: ansibleservers
   become: yes
   tasks:
   - name: check user exist or not
