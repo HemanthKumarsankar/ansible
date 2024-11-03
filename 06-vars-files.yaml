@@ -1,7 +1,7 @@
 - name: vars from files
   hosts: ansibleservers
-  vars: #variabls declared from files
-   vars.yml 
+  vars_files: #variabls declared from files
+  - vars.yml 
   tasks:
    - name: print the course info 
      ansible.builtin.debug:
