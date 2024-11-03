@@ -1,0 +1,15 @@
+  #PLAY-01
+- name: ping the server
+  hosts: anisbleservers #to connect server
+  tasks: #list of tasks/module
+  - name: PLAY-01 TASK-01
+    ansible.builtin.ping:
+    msg: "This is from PLAY-01 and TASK-01"
+
+#PLAY-02
+- name: ping the server
+  hosts: ansibleservers
+  tasks:
+   - name: PLAY-02 TASK-01
+     ansible.builtin.ping:
+     msg: "This is from PLAY-02 and TASK-01"
