@@ -1,0 +1,13 @@
+- name: loops demo
+  hosts: local
+  connection: local
+  tasks:
+   - name: install packages
+     ansible.builtin.package:
+      name: "hello {{ item }}"  #item is the reserved keyword in ansible
+      state: present
+     loop:
+     - nginx
+     - ansible
+     - httpd
+     - mysql
