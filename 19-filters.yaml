@@ -4,5 +4,10 @@
   - name: print default variables
     ansible.builtin.debug:
      msg: "Hello {{course | default('Ansible')}}" #here course variable has not defind so in ansible by using default filter we can achieve varibales
-     
+  - name: print in uppercase
+    ansible.builtin.debug:
+      msg: "My name is {{ramesh | upper}}"
+  - name: print in lowercase
+    ansible.builtin.debug:
+      msg: "My name is {{Ramesh | lower}}"
 
