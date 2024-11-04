@@ -1,6 +1,5 @@
 - name: using loops adding and removing packages in server
-  hosts: local
-  connection: localhost
+  hosts: ansibleservers
   become: yes
   tasks:
   - name: install packages
@@ -9,7 +8,7 @@
      state: "{{item.state}}"
     loop:
     - {name: 'ansible' , state: 'present'}
-    # - {name: 'httpd' , state: 'absent'}
-    # - {name: 'nginx' , state: 'present'}
-    # - {name: 'mysql' , state: 'absent'}
+    - {name: 'httpd' , state: 'absent'}
+    - {name: 'nginx' , state: 'present'}
+    - {name: 'mysql' , state: 'absent'}
     
