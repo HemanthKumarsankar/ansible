@@ -1,5 +1,5 @@
 - name: using loops adding and removing packages in server
-  hosts: ansibleservers
+  hosts: ansibleservers  
   become: yes
   tasks:
   - name: install packages

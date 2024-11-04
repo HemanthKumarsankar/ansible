@@ -1,0 +1,8 @@
+- name: demo on filters/functions
+  hosts: ansibleservers
+  tasks: 
+  - name: print default variables
+    ansible.builtin.debug:
+     msg: "Hello {{course | default('Ansible')}}" #here course variable has not defind so in ansible by using default filter we can achieve varibales
+     
+
