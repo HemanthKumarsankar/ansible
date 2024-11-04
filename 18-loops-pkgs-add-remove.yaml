@@ -1,6 +1,7 @@
 - name: using loops adding and removing packages in server
   hosts: local
   connection: localhost
+  vars:
   become: yes
   tasks:
   - name: install packages
