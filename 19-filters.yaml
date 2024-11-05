@@ -16,8 +16,14 @@
       greetings: "HELLO RAMESH"
     ansible.builtin.debug:
       msg: "My name is {{greetings | lower}}"
+  #using filters to manipulte data-->google it
   - name: print unique values
     vars:
       numbers: [1,2,3,45,643,4,643,53,5,7,7,5,7]
     ansible.builtin.debug:
       msg: "unique values of a numbers:{{numbers | unique}}"
+
+    -name: print minimum and maximum numbers
+    ansible.builtin.debug:
+      msg: "Min: {{numbers|min}}, Max: {{numbers| max}}"
+
