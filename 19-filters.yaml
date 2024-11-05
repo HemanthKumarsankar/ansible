@@ -15,5 +15,5 @@
     vars:
       greetings: "HELLO RAMESH"
     ansible.builtin.debug:
-      msg: "My name is {{greetigs | lower}}"
+      msg: "My name is {{greetings | lower}}"
 
