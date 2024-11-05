@@ -7,3 +7,10 @@
     #command module, just executes the command
     ansible.builtin.shell: ls -lrt > /tmp/output.txt 
     #shell module, login to the server and execute command
+
+  - name: to execute the process
+    ansible.builtin.command: ps -ef | grep
+    register: output  ##this register command will stores the o/p 
+
+
+
