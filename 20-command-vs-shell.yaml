@@ -1,0 +1,9 @@
+- name: diffrence bte command and shell
+  hosts: local
+  connection: localhost
+  tasks:
+  - name: to execute by using command
+    ansible.builtin.command: ls -lrt > /temp/output.txt 
+    #command module, just executes the command
+    #ansible.builtin.shell: ls -lrt > /temp/output.txt 
+    #shell module, login to the server and execute command

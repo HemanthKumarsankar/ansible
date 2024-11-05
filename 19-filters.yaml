@@ -46,3 +46,11 @@
         - {"key": "trainer","value": "Siva Kumar"}
     ansible.builtin.debug:
      msg: "{{course|items2dict}}"
+
+# to check ansible version--> ansible --version
+# For python buildtool is pip -->version know pip3.9
+# if required few library have to install related to it pakcages.
+# here we are installing library-[netaddr]  --> pip3.9 install netaddr
+
+
+
