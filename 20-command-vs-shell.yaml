@@ -9,7 +9,8 @@
     #shell module, login to the server and execute command
 
   - name: to execute the process
-    ansible.builtin.command: ps -ef | grep
+   # ansible.builtin.command: ps -ef | grep
+    ansible.builtin.shell: ps -ef | grep
     register: output  ##this register command will stores the o/p 
 
 
