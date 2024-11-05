@@ -23,7 +23,7 @@
     ansible.builtin.debug:
       msg: "unique values of a numbers:{{numbers | unique}}"
 
-    -name: print minimum and maximum numbers
+  - name: print minimum and maximum numbers
     ansible.builtin.debug:
       msg: "Min: {{numbers|min}}, Max: {{numbers| max}}"
 
