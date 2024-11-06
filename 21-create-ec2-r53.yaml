@@ -1,0 +1,8 @@
+- name: creating ec2_instance
+  hosts: local
+  connection: local
+  tasks: 
+  name: creating ec2_servser in aws
+  amazon.aws.ec2_instance:
+    state: present
+     

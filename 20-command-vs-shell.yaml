@@ -12,6 +12,8 @@
    # ansible.builtin.command: ps -ef | grep ssh
     ansible.builtin.shell: ps -ef | grep ssh
     register: output  ##this register command will stores the o/p 
-
+  - name: check the process
+    ansible.builtin.command: ps -ef | grep ssh
+    register: output 
 
 
