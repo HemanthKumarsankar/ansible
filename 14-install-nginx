@@ -1,40 +1,19 @@
-# - name: install nginx
-#   become: yes
-#   hosts: ansibleservers
-#   tasks:
-#   - name: print the stats
-#     ansible.builtin.debug:
-#       msg: "{{ ansible_facts }}"   #ansible tooks automatic as automatic variable
-  
-#   - name: install nginx if redhat
-#     ansible.builtin.dnf:
-#       name: nginx
-#       state: present
-#     when: ansible_os_family == "RedHat"
-
-#   - name: install nginx if Debian
-#     ansible.builtin.apt:
-#       name: nginx
-#       state: present
-#     when: ansible_os_family == "Debian"
-
-- name: install ansible
+- name: install nginx
   become: yes
-  hosts: local
-  connection: local
+  hosts: ansibleservers
   tasks:
   - name: print the stats
     ansible.builtin.debug:
       msg: "{{ ansible_facts }}"   #ansible tooks automatic as automatic variable
   
-  - name: install ansible if redhat
+  - name: install nginx if redhat
     ansible.builtin.dnf:
-      name: ansible
+      name: nginx
       state: present
     when: ansible_os_family == "RedHat"
 
-  - name: install ansible if Debian
+  - name: install nginx if Debian
     ansible.builtin.apt:
-      name: ansible
+      name: nginx
       state: present
     when: ansible_os_family == "Debian"
