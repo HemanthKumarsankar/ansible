@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   tasks:
-  - name: to execute by using command
+  #- name: to execute by using command
     #ansible.builtin.command: ls -lrt > /tmp/output.txt 
   #   #command module, just executes the command
    # ansible.builtin.shell: ls -lrt > /tmp/output.txt 
