@@ -3,17 +3,17 @@
   connection: local
   tasks:
   - name: to execute by using command
-    #ansible.builtin.command: ls -lrt > /tmp/output.txt 
-    #command module, just executes the command
-    ansible.builtin.shell: ls -lrt > /tmp/output.txt 
-    #shell module, login to the server and execute command
+    ansible.builtin.command: ls -lrt > /tmp/output.txt 
+  #   #command module, just executes the command
+  #   ansible.builtin.shell: ls -lrt > /tmp/output.txt 
+  #   #shell module, login to the server and execute command
 
-  - name: check the process
-   # ansible.builtin.command: ps -ef | grep ssh
-    ansible.builtin.shell: ps -ef | grep ssh
-    register: output  ##this register command will stores the o/p 
-  - name: check the process
-    ansible.builtin.command: ps -ef | grep ssh
-    register: output 
+  # - name: check the process
+  #  # ansible.builtin.command: ps -ef | grep ssh
+  #   ansible.builtin.shell: ps -ef | grep ssh
+  #   register: output  ##this register command will stores the o/p 
+  # - name: check the process
+  #   ansible.builtin.command: ps -ef | grep ssh
+  #   register: output 
 
 
