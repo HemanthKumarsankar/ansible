@@ -10,13 +10,13 @@
     - backend
     - frontend
   tasks: 
-  name: creating ec2_servser in aws
-  amazon.aws.ec2_instance:
-    name: "{{item}}"
-    vpc_subnet_id: "{{subnet_id}"
-    instance_type: "t3.micro"
-    security_group: "{{sg}}"
-    image_id: "{{ami_id}}"
+  - name: creating ec2_servser in aws
+    amazon.aws.ec2_instance:
+      name: "{{item}}"
+      vpc_subnet_id: "{{subnet_id}"
+      instance_type: "t3.micro"
+      security_group: "{{sg}}"
+      image_id: "{{ami_id}}"
   loop: "{{instances}}"
   register: ec2_instances
 
