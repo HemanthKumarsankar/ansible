@@ -5,7 +5,7 @@
     subnet_id: subnet-0755a33f9c8388b31
     sg: sg-04de82942b1f8408d
     ami_id: ami-09c813fb71547fc4f    # this chanes have modify
-    instnaces:
+    instances:
     - mysql
     - backend
     - frontend
