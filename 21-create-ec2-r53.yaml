@@ -20,4 +20,12 @@
     loop: "{{instances}}"
     register: ec2_instances
 
+    ####installed boto3 & botocore library
+    # pipe3.9 install boto3 botocore
+    # configured CLI for anuthentication
+    # aws configure
+    
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ec2_instances}}"
      
