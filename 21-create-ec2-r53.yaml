@@ -38,13 +38,13 @@
     amazon.aws.route53:
       state: present
       zone: "{{zone}}"
-      record: "{{item.item}}.{{zone}}" #mysql
+      record: "{{item.item}}.{{zone}}" #mysql.Hemanthkumarsankar
       type: A
       ttl: 1
       value: "{{ item.instance[0].private-ip_address}}"
     #In loop here results called as item from that intances we get into listinstance[0] we required private ips so we can give as .private-ip_address
       wait: true
-      
+      overwrite: true -> this will over existing records
 
     loop: "{{ec2_instances.resluts}}"
      
