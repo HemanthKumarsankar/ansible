@@ -23,8 +23,10 @@
 
     ####installed boto3 & botocore library
     # pipe3.9 install boto3 botocore
-    # configured CLI for anuthentication
-    # aws configure
+    #The error was: botocore.exceptions.NoCredentialsError: Unable to locate credentials
+     # configured CLI for anuthentication
+    #IAM->users->create user->Attach policies directly->AdministratorAccess-(job functio)->create user->sercurity cerdinals->create access key->CLI->create
+        # aws configure
     
   - name: print the output
     ansible.builtin.debug:
@@ -32,17 +34,17 @@
 
 #ec2_instances.results -->list type
 #google- anisble r53
-  # - name: create r53 records
-  #   amazon.aws.route53:
-  #     state: present
-  #     zone: "{{zone}}"
-  #     record: "{{}}" #mysql
-  #     type: A
-  #     ttl: 1
-  #     value: "{{ item.instance[0].private-ip_address}}"
-  #   #In loop here results called as item from that intances we get into listinstance[0] we required private ips so we can give as .private-ip_address
-  #     wait: true
+  - name: create r53 records
+    amazon.aws.route53:
+      state: present
+      zone: "{{zone}}"
+      record: "{{}}" #mysql
+      type: A
+      ttl: 1
+      value: "{{ item.instance[0].private-ip_address}}"
+    #In loop here results called as item from that intances we get into listinstance[0] we required private ips so we can give as .private-ip_address
+      wait: true
       
 
-  #   loop: "{{ec2_instances.resluts}}"
+    loop: "{{ec2_instances.resluts}}"
      
