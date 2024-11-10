@@ -46,5 +46,5 @@
       wait: true
       overwrite: true -> this will over existing records
 
-    loop: "{{ec2_instances.resluts}}"
+    loop: "{{ec2_instances.results}}"
      
