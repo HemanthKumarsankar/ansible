@@ -38,7 +38,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{zone}}"
-      record: "{{item.item}}.{{zone}}" #mysql.Hemanthkumarsankar
+      record: "{{item.item}}.{{zone}}" #mysql.HemanthKumarsankar
       type: A
       ttl: 1
       value: "{{ item.instance[0].private-ip_address}}"
